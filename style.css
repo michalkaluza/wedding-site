@@ -1,0 +1,956 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Spartan', sans-serif; */
+    font-family: 'Luxurious Roman', cursive;
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+}
+
+/* 
+#9A80BF - jasna lawenda
+#866BBF - cioemna lawenda
+#54592C - ciemny zielony
+#9CA653 - jasny zielony
+#D9C9BA - kremowy
+*/
+/* font-family: 'Alex Brush', cursive;
+font-family: 'Luxurious Roman', cursive;
+font-family: 'Saira', sans-serif;
+font-family: 'Saira Condensed', sans-serif;
+font-family: 'Spartan', sans-serif; */
+
+body {
+    background-color: #e8e3f0;
+    --scaleOrnament: 0.4;
+
+}
+
+.wrap {
+    /* max-width: 1024px; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    height: 100vh;
+    position: relative;
+    /* margin-bottom: 15vh; */
+
+}
+
+header::after {
+    content: "";
+    background-image: url(header1.jpg);
+    background-size: cover;
+    /* background-position: 0% 0%; */
+    top: 0;
+    left: -5%;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+
+header::before {
+    content: "";
+    background-color: black;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.2;
+
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding: 10%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+}
+
+header div img {
+    width: 50%;
+    align-self: center;
+}
+
+header div img:nth-of-type(1) {
+    transform: translateY(150%);
+    opacity: 0;
+    animation: ornament1 1s ease forwards;
+}
+
+header div img:nth-of-type(2) {
+    transform: translateY(-150%);
+    opacity: 0;
+    animation: ornament2 1s ease forwards;
+}
+
+@keyframes ornament1 {
+
+    0% {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes ornament2 {
+
+    0% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+header h1 {
+
+    color: white;
+    font-family: 'Alex Brush', cursive;
+    font-size: 32px;
+    font-weight: 500;
+    text-shadow: 6px 6px 6px black;
+    opacity: 0;
+    animation: headerH1 1s .5s ease forwards;
+
+}
+
+@keyframes headerH1 {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* sekcja 2 - counter */
+
+.counter {
+    /* position: relative; */
+    /* display: flex;
+    flex-direction: column; */
+    overflow: hidden;
+    padding-bottom: 7.5vh;
+    padding-top: 15vh;
+
+}
+
+.date {
+    width: 90%;
+    margin: 0vh auto 0vh;
+
+}
+
+.lavender {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.lavender img {
+    margin: 5% 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.date>p {
+    font-size: 34px;
+    width: 100%;
+    text-align: center;
+}
+
+.counterFlex {
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.counterFlex span {
+    display: block;
+    width: 100%;
+    padding: 0 3%;
+    text-align: center;
+    font-family: 'Spartan', sans-serif;
+    font-size: 14px;
+}
+
+.dateBox {
+    padding: 2%;
+    flex-basis: 20%;
+    background-color: hsl(260, 29%, 88%);
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Spartan'
+
+}
+
+.dateBox span:nth-of-type(1) {
+    color: #9CA653;
+}
+
+.count {
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+/* PhotoSwap section */
+
+.photoSwap {
+    display: flex;
+    flex-direction: column;
+    --bcgColor: #d2c6e6;
+    padding-top: 9.5vh;
+    padding-bottom: 9.5vh;
+    /* background-color: var(--bcgColor); */
+    background: linear-gradient(180deg, rgba(210, 198, 230, 0) 0%, rgba(210, 198, 230, 1) 10%, rgba(210, 198, 230, 1) 90%, rgba(210, 198, 230, 0) 100%);
+
+}
+
+.photoSwap>p {
+    /* font-family: 'Alex Brush', cursive; */
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 7vh;
+    padding: 0 5%;
+}
+
+.photoSwapFlex {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.photoSwapFlex>div {
+    position: relative;
+    width: 100%;
+}
+
+.photoSwapFlex>div img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+}
+
+
+.photoSwapFlex>div img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.boxShadowOnOld {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 45%; */
+    box-shadow: inset 0 0 150px 40px var(--bcgColor);
+    z-index: 2;
+    opacity: 0;
+}
+
+.active {
+    animation-name: boxShadow;
+    animation-duration: 1.3s;
+
+}
+
+@keyframes boxShadow {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+/* main section */
+
+
+.mainText {
+    width: 100%;
+    text-align: center;
+    padding: 5vh 5% 12.5vh;
+}
+
+
+.mainText2 {
+    width: 100%;
+    text-align: center;
+    padding: 0% 5%;
+    /* margin-bottom: 7vh; */
+}
+
+
+.mainText>p:nth-of-type(1) {
+    margin-bottom: 7vh;
+
+}
+
+.mainText h1 {
+    font-size: 20px;
+    margin: 0 5% 10vh;
+    /* line-height: 48px; */
+    padding-bottom: 10px;
+}
+
+.underline {
+    background-image: linear-gradient(black, black);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .3s ease-out;
+}
+
+.mainText>p:nth-of-type(2) {
+    margin-bottom: 0vh;
+}
+
+.map {
+    width: 100%;
+    overflow: hidden;
+}
+
+.map p {
+    text-align: center;
+    padding: 0 5%;
+    margin-bottom: 6vh;
+}
+
+.map iframe {
+    width: 100%;
+    height: 320px;
+    margin-bottom: -5px;
+}
+
+.mainBackground {
+    width: 100%;
+}
+
+.mainBackground .map p {
+    margin-top: 12.5vh;
+}
+
+.mainText2 {
+    position: relative;
+    width: 90%;
+    margin: 5vh auto 5vh;
+    padding: 0 5%;
+    background-color: #d2c6e6;
+    overflow: hidden;
+}
+
+.sideLavender {
+    position: absolute;
+    width: 30%;
+    top: -5%;
+    right: -5%;
+    opacity: .4;
+}
+
+.sideLavender img {
+    width: 100%;
+
+}
+
+.sideLavender2 {
+    position: absolute;
+    width: 30%;
+    bottom: 10%;
+    left: -3%;
+    opacity: .4;
+}
+
+.sideLavender2 img {
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+
+.mainText2 p {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+}
+
+.mainText2 p:nth-of-type(2) {
+    padding-bottom: 5vh;
+}
+
+
+.mainText2 p span {
+    font-weight: bold;
+}
+
+.mainText2 .map {
+    margin-bottom: 0;
+}
+
+.confirmation {
+    text-align: center;
+    padding: 0 5%;
+    margin-bottom: 15vh;
+}
+
+.confirmation>p {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin-bottom: 10vh;
+}
+
+.contact>div {
+    background-color: #d2c6e6;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.contact>div:hover {
+    transition: .5s;
+}
+
+.contact>div:nth-of-type(1) {
+    margin-bottom: 7vh;
+}
+
+.contact div p {
+    line-height: 220%;
+}
+
+
+
+
+.gift {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.gift img {
+    width: 100%;
+}
+
+/* galeria zdjęć */
+
+.gallery {
+    padding: 0 5%;
+}
+
+.gallery button {
+    display: flex;
+    background-color: #ffffff;
+    margin: 5vh auto 5vh;
+    text-align: center;
+    border: 0px;
+    box-shadow: 2px 2px 18px 0px grey;
+}
+
+.gallery button a {
+    display: block;
+    line-height: 35px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    pointer-events: none;
+}
+
+.gallery button img {
+    height: 35px;
+    margin: auto 20px auto 0;
+}
+
+.gallery {
+    margin-bottom: 7vh;
+}
+
+.ending {
+    background: linear-gradient(180deg, rgba(210, 198, 230, 0) 0%, rgba(210, 198, 230, 1) 25%, rgba(210, 198, 230, 1) 100%);
+    padding: 10vh 5% 0;
+}
+
+.ending p {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.ending h1 {
+    text-align: center;
+
+    padding-bottom: 15vh;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (orientation: landscape) {
+
+
+
+    header::after {
+        background-image: url(header_wide.jpg);
+        background-size: cover;
+        top: -20%;
+        left: 0%;
+        bottom: 0;
+        right: 0;
+    }
+
+    header div {
+        top: 55%;
+        left: 70%;
+        width: 100%;
+    }
+
+    header div img {
+        width: 25%;
+        align-self: center;
+    }
+
+    .counterFlex {
+        padding: 5vh 15%;
+    }
+
+    .lavender {
+        width: 40%;
+    }
+
+    .photoSwap {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .photoSwap>p {
+        align-self: center;
+    }
+
+    .photoSwapFlex {
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+
+    }
+
+    .photoSwapFlex>div {
+        height: 70vh;
+        width: 70vh;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 5vw;
+    }
+
+    .photoSwapFlex div>img {
+        position: absolute;
+        top: -10%;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .photoSwapFlex div>img:nth-of-type(2) {
+        top: -10%;
+    }
+
+    .mainText h1 {
+        /* font-size: 24px; */
+        margin: 0 15% 10vh;
+        padding: 10px;
+    }
+
+
+    .mainText2 {
+        width: 80%;
+        text-align: center;
+        margin: 10vh auto;
+        padding: 10% 10% 2%;
+        /* margin-bottom: 7vh; */
+    }
+
+    .sideLavender2 {
+        bottom: 0%;
+        left: -3%;
+    }
+
+    .map p {
+        margin-bottom: 10vh;
+    }
+
+    .confirmation>p {
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+    }
+
+    .confirmation {
+        margin-bottom: 25vh;
+    }
+
+    .contact {
+        margin-bottom: 20vh;
+    }
+
+    .contact>div {
+        padding: 0 5%;
+    }
+
+    .contact>div:nth-of-type(1) {
+        margin-bottom: 10vh;
+    }
+
+    .gift {
+        width: 40%;
+    }
+
+    .gallery {
+        margin-bottom: 15vh;
+    }
+
+}
+
+@media (min-device-width: 768px) and (orientation: landscape) {
+    * {
+        font-size: 24px;
+    }
+
+    header::after {
+        top: -25%;
+        left: 0%;
+        bottom: 0;
+        right: 0;
+    }
+
+    header div img {
+        width: 30%;
+    }
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    .mainText h1 {
+        font-size: 24px;
+    }
+
+    .gift {
+        width: 30%;
+    }
+
+    .dateBox {
+        padding: 2%;
+        flex-basis: 15%;
+    }
+
+}
+
+@media (min-device-width: 400px) and (orientation: portrait) {
+    * {
+        font-size: 24px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    .mainText h1 {
+        font-size: 24px;
+        padding: 10px 0%;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+
+    * {
+        font-size: 38px;
+    }
+
+    .date>p {
+        font-size: 54px;
+    }
+
+    .counterFlex span {
+        font-size: 24px;
+    }
+
+    .photoSwap>p {
+        font-size: 40px;
+    }
+
+    header h1 {
+        font-size: 66px;
+    }
+
+    .mainText h1 {
+        font-size: 38px;
+        padding: 15px 5%;
+    }
+
+
+    .gallery button a {
+        line-height: 65px;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .gallery button img {
+        height: 55px;
+        margin: auto 20px auto 0;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+
+    header div {
+        top: 40%;
+        left: 75%;
+    }
+
+    .date>p {
+        font-size: 40px;
+    }
+
+    .lavender img {
+        margin: 15% 0;
+    }
+
+    .dateBox {
+        padding: 2%;
+        flex-basis: 20%;
+    }
+
+    .dateBox span {
+        font-size: 20px;
+    }
+
+    .photoSwap {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+    }
+    
+    .photoSwap>p {
+        align-self: center;
+        margin-right: 5vw;
+    }
+    .photoSwapFlex {
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: center;
+
+    }
+
+    .photoSwapFlex>div {
+        height: 50vh;
+        width: 50vh;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 5vw;
+        align-content: center;
+    }
+
+    .photoSwapFlex div>img {
+        position: absolute;
+        top: -10%;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .mainText h1 {
+        margin: 0 25% 10vh;
+    }
+
+    .map {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .date>p {
+        font-size: 30px;
+    }
+
+    .lavender {
+        width: 30%;
+    }
+
+    .counterFlex {
+        padding: 30px 25%;
+        justify-content: space-around;
+    }
+
+    .dateBox {
+        padding: 2%;
+        flex-basis: 15%;
+    }
+
+    .dateBox span {
+        font-size: 15px;
+    }
+
+    .mainText2 {
+        width: 70%;
+        margin-bottom: 0;
+    }
+
+    .contact {
+        flex-direction: row;
+        margin-bottom: 5vh;
+    }
+
+    .contact>div:nth-of-type(2) {
+        margin-bottom: 10vh;
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+    header div {
+        top: 50%;
+        left: 75%;
+    }
+
+    header div img {
+        width: 20%;
+    }
+
+    header h1 {
+        font-size: 65px;
+    }
+
+    .date>p {
+        font-size: 40px;
+    }
+
+    .photoSwapFlex>div {
+        margin-right: 10%;
+    }
+
+    .photoSwapFlex {
+        justify-content: right;
+    }
+
+    .photoSwap>p {
+        margin-right: 15vw;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .map iframe {
+        height: 600px;
+    }
+
+}
+
+@media (min-width: 1366px) {
+
+    .sideLavender, .sideLavender2 {
+        width: 25%;
+    }
+
+}
+
+@media (min-width: 1366px) {
+
+.mainText h1 {
+    margin: 0 30% 10vh;
+}
+
+}
+
+@media (min-width: 1920px) {
+
+    * {
+        font-size: 30px;
+    }
+
+    header h1 {
+        font-size: 80px;
+    }
+
+    header div img {
+        width: 15%;
+    }
+
+    .date>p {
+        font-size: 60px;
+    }
+
+    .dateBox span {
+        font-size: 20px;
+    }
+
+    .photoSwap>p {
+        font-size: 38px;
+    }
+
+    .mainText h1 {
+        font-size: 30px;
+    }
+
+    .gift {
+        width: 20%;
+    }
+
+    .gallery button a {
+        font-size: 35px;
+        padding: 30px 40px;
+    }
+
+}
