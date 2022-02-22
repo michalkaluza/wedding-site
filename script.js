@@ -31,6 +31,7 @@
             }
         }, 1000);
 
+
 // photo swap
 
 
@@ -89,3 +90,6 @@ $(document).on("scroll", function () {
         $(".underline").css("background-size", "100% 1px")}
     })
 // $(document).on("scroll", function () {
+
+
+
