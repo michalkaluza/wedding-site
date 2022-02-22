@@ -42,7 +42,7 @@ header {
 
 header::after {
     content: "";
-    background-image: url(header1.jpg);
+    background-image: url(header1.webp);
     background-size: cover;
     /* background-position: 0% 0%; */
     top: 0;
@@ -540,7 +540,7 @@ footer p {
 
 
     header::after {
-        background-image: url(header_wide.jpg);
+        background-image: url(header_wide.webp);
         background-size: cover;
         top: -20%;
         left: 0%;
