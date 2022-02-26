@@ -75,11 +75,10 @@ $(document).on("scroll", function () {
             old.style.opacity = "0";
             $boxShadow.removeClass("active");
         }
-    }
-    
-    
-    
-    
+    } 
+  
+//underline 
+
 })
 
 $(document).on("scroll", function () {
@@ -89,7 +88,7 @@ $(document).on("scroll", function () {
     if ($underlineOffset <= scrollValue2 + windowHeight) {
         $(".underline").css("background-size", "100% 1px")}
     })
-// $(document).on("scroll", function () {
+
 
 
 

@@ -8,13 +8,13 @@
     color: rgb(37, 37, 37);
 }
 
-/* 
-#9A80BF - jasna lawenda
-#866BBF - cioemna lawenda
-#54592C - ciemny zielony
-#9CA653 - jasny zielony
-#D9C9BA - kremowy
-*/
+:root {
+    --brightPurple: #e8e3f0;
+    --midPurple: hsl(260, 29%, 88%);
+    --darkPurple: #d2c6e6;
+}
+
+
 /* font-family: 'Alex Brush', cursive;
 font-family: 'Luxurious Roman', cursive;
 font-family: 'Saira', sans-serif;
@@ -22,29 +22,25 @@ font-family: 'Saira Condensed', sans-serif;
 font-family: 'Spartan', sans-serif; */
 
 body {
-    background-color: #e8e3f0;
-    --scaleOrnament: 0.4;
-
+    background-color: var(--brightPurple);
 }
 
 .wrap {
-    /* max-width: 1024px; */
     margin: 0 auto;
     overflow: hidden;
 }
 
+/* header */
+
 header {
     height: 100vh;
     position: relative;
-    /* margin-bottom: 15vh; */
-
 }
 
 header::after {
     content: "";
     background-image: url(header1.webp);
     background-size: cover;
-    /* background-position: 0% 0%; */
     top: 0;
     left: -5%;
     bottom: 0;
@@ -64,13 +60,11 @@ header::before {
     background-repeat: no-repeat;
     position: absolute;
     opacity: 0.2;
-
 }
 
 header div {
     display: flex;
     flex-direction: column;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,7 +72,6 @@ header div {
     padding: 10%;
     text-align: center;
     transform: translate(-50%, -50%);
-
 }
 
 header div img {
@@ -109,7 +102,6 @@ header div img:nth-of-type(2) {
         transform: translateY(0);
         opacity: 1;
     }
-
 }
 
 @keyframes ornament2 {
@@ -123,12 +115,9 @@ header div img:nth-of-type(2) {
         transform: translateY(0);
         opacity: 1;
     }
-
 }
 
-
 header h1 {
-
     color: white;
     font-family: 'Alex Brush', cursive;
     font-size: 32px;
@@ -136,7 +125,6 @@ header h1 {
     text-shadow: 6px 6px 6px black;
     opacity: 0;
     animation: headerH1 1s .5s ease forwards;
-
 }
 
 @keyframes headerH1 {
@@ -148,25 +136,19 @@ header h1 {
     100% {
         opacity: 1;
     }
-
 }
 
-/* sekcja 2 - counter */
+/* counter */
 
 .counter {
-    /* position: relative; */
-    /* display: flex;
-    flex-direction: column; */
     overflow: hidden;
     padding-bottom: 7.5vh;
     padding-top: 15vh;
-
 }
 
 .date {
     width: 90%;
     margin: 0vh auto 0vh;
-
 }
 
 .lavender {
@@ -205,15 +187,14 @@ header h1 {
 .dateBox {
     padding: 2%;
     flex-basis: 20%;
-    background-color: hsl(260, 29%, 88%);
+    background-color: var(--midPurple);
     border-radius: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 12px;
     font-weight: bold;
-    font-family: 'Spartan'
-
+    font-family: 'Spartan', sans-serif;
 }
 
 .dateBox span:nth-of-type(1) {
@@ -225,25 +206,19 @@ header h1 {
     font-size: 18px;
     width: 100%;
     text-align: center;
-
-
 }
 
-/* PhotoSwap section */
+/* PhotoSwap */
 
 .photoSwap {
     display: flex;
     flex-direction: column;
-    --bcgColor: #d2c6e6;
     padding-top: 9.5vh;
     padding-bottom: 9.5vh;
-    /* background-color: var(--bcgColor); */
     background: linear-gradient(180deg, rgba(210, 198, 230, 0) 0%, rgba(210, 198, 230, 1) 10%, rgba(210, 198, 230, 1) 90%, rgba(210, 198, 230, 0) 100%);
-
 }
 
 .photoSwap>p {
-    /* font-family: 'Alex Brush', cursive; */
     font-size: 28px;
     text-align: center;
     margin-bottom: 7vh;
@@ -265,7 +240,6 @@ header h1 {
 .photoSwapFlex>div img {
     width: 100%;
     height: 100%;
-    /* border-radius: 50%; */
 }
 
 
@@ -283,8 +257,7 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    /* border-radius: 45%; */
-    box-shadow: inset 0 0 150px 40px var(--bcgColor);
+    box-shadow: inset 0 0 150px 40px var(--darkPurple);
     z-index: 2;
     opacity: 0;
 }
@@ -292,7 +265,6 @@ header h1 {
 .active {
     animation-name: boxShadow;
     animation-duration: 1.3s;
-
 }
 
 @keyframes boxShadow {
@@ -307,7 +279,6 @@ header h1 {
     100% {
         opacity: 0;
     }
-
 }
 
 /* main section */
@@ -319,24 +290,20 @@ header h1 {
     padding: 5vh 5% 12.5vh;
 }
 
-
 .mainText2 {
     width: 100%;
     text-align: center;
     padding: 0% 5%;
-    /* margin-bottom: 7vh; */
 }
 
 
 .mainText>p:nth-of-type(1) {
     margin-bottom: 7vh;
-
 }
 
 .mainText h1 {
     font-size: 20px;
     margin: 0 5% 10vh;
-    /* line-height: 48px; */
     padding-bottom: 10px;
 }
 
@@ -382,7 +349,7 @@ header h1 {
     width: 90%;
     margin: 5vh auto 5vh;
     padding: 0 5%;
-    background-color: #d2c6e6;
+    background-color: var(--darkPurple);
     overflow: hidden;
 }
 
@@ -396,7 +363,6 @@ header h1 {
 
 .sideLavender img {
     width: 100%;
-
 }
 
 .sideLavender2 {
@@ -431,6 +397,8 @@ header h1 {
     margin-bottom: 0;
 }
 
+/* confirmation */
+
 .confirmation {
     text-align: center;
     padding: 0 5%;
@@ -442,6 +410,8 @@ header h1 {
     margin-bottom: 5vh;
 }
 
+/* contact */
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -450,7 +420,7 @@ header h1 {
 }
 
 .contact>div {
-    background-color: #d2c6e6;
+    background-color: var(--darkPurple);
     width: auto;
     margin: 0 auto;
     padding: 0 10%;
@@ -468,8 +438,7 @@ header h1 {
     line-height: 220%;
 }
 
-
-
+/* gift */
 
 .gift {
     width: 50%;
@@ -480,7 +449,7 @@ header h1 {
     width: 100%;
 }
 
-/* galeria zdjęć */
+/* photo gallery */
 
 .gallery {
     padding: 0 5%;
@@ -513,6 +482,8 @@ header h1 {
     margin-bottom: 7vh;
 }
 
+/* ending */
+
 .ending {
     background: linear-gradient(180deg, rgba(210, 198, 230, 0) 0%, rgba(210, 198, 230, 1) 25%, rgba(210, 198, 230, 1) 100%);
     padding: 10vh 5% 0;
@@ -526,18 +497,19 @@ header h1 {
 
 .ending h1 {
     text-align: center;
-
     padding-bottom: 15vh;
 }
+
+/* footer */
 
 footer p {
     font-size: 12px;
     text-align: center;
 }
 
+/* media queries */
+
 @media (orientation: landscape) {
-
-
 
     header::after {
         background-image: url(header_wide.webp);
@@ -580,7 +552,6 @@ footer p {
         display: flex;
         width: 70%;
         margin: 0 auto;
-
     }
 
     .photoSwapFlex>div {
@@ -604,18 +575,15 @@ footer p {
     }
 
     .mainText h1 {
-        /* font-size: 24px; */
         margin: 0 15% 10vh;
         padding: 10px;
     }
-
 
     .mainText2 {
         width: 80%;
         text-align: center;
         margin: 10vh auto;
         padding: 10% 10% 2%;
-        /* margin-bottom: 7vh; */
     }
 
     .sideLavender2 {
@@ -659,6 +627,7 @@ footer p {
 }
 
 @media (min-device-width: 768px) and (orientation: landscape) {
+    
     * {
         font-size: 24px;
     }
@@ -694,6 +663,7 @@ footer p {
 }
 
 @media (min-device-width: 400px) and (orientation: portrait) {
+    
     * {
         font-size: 24px;
     }
@@ -734,7 +704,6 @@ footer p {
         font-size: 38px;
         padding: 15px 5%;
     }
-
 
     .gallery button a {
         line-height: 65px;
@@ -791,7 +760,6 @@ footer p {
         width: 70%;
         margin: 0 auto;
         justify-content: center;
-
     }
 
     .photoSwapFlex>div {
