@@ -405,6 +405,41 @@ header h1 {
     margin-bottom: 15vh;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+form input {
+    border: none;
+    margin-bottom: 2vh;
+    text-align: center;
+    
+}
+
+form ::placeholder {
+    color: rgb(216, 216, 216);  
+}
+
+form input:nth-of-type(3) {
+    min-height: 20vh;
+    margin-bottom: 6vh;
+}
+
+form button {
+    background-color: var(--darkPurple);
+    border: none;
+    margin-bottom: 15vh;
+    padding: 0.5rem 0;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #ad9acc;
+    cursor: pointer;
+}
+
 .confirmation>p {
     margin-top: 10vh;
     margin-bottom: 5vh;
@@ -602,6 +637,15 @@ footer p {
 
     .confirmation {
         margin-bottom: 25vh;
+    }
+
+    form input {
+        margin-bottom: 4vh;
+    }
+
+    form input:nth-of-type(3) {
+        min-height: 20vh;
+        margin-bottom: 10vh;
     }
 
     .contact {
