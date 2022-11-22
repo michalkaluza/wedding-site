@@ -19,10 +19,10 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Display the result in the element with id="demo"
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
 
             // If the count down is finished, write some text
             if (distance < 0) {
